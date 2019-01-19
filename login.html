@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>一个bootstrap的用户登录界面</title>
+    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js">
+</head>
+<body>
+    <header class="bar"></header>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="InputAccount" class="col-sm-2 control-label">注册账号</label>
+                <div class="col-sm-10">
+                    <input type="email" maxlength="18" placeholder="123456789@example.com" class="form-control">
+                </div>
+            </div> 
+            <div class="form-group">
+                <label for="InputPassword" class="col-sm-2 control-label">密码</label>
+                <div class="col-sm-10">
+                    <input type="password" maxlength="16" placeholder="Password" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputID" class="col-sm-2 control-label">验证码</label>
+                <div class="col-sm-10">
+                    <input type="text" maxlength="4" placeholder="验证码需要通过管理员获取" class="form-control">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-default">Registered</button>
+        </form>
+    </div>
+</body>
+</html>
