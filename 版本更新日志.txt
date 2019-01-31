@@ -1,0 +1,57 @@
+/*
+* @Author: huangjiacheng
+* @Date:   2019-1-10
+*/
+
+
+理由：学习bootstrap时突发动力制作该项目
+
+
+
+2019-1-10
+login0.0.1.html
+
+registered0.0.1.html
+
+registered0.0.1.php
+
+
+
+2019-1-15
+login0.0.2.html 0;
+修改title标签内容
+
+registered0.0.2.html 
+修改title标签内容
+logo链接由“#”改为“javascript:void(0);”
+更正placeholder内容
+新增切换导航	（已实现）
+原因：未导入jquery及bootstrap.js导入方式错误
+修正大屏input居中	（暂未实现）
+
+registered0.0.2.php 在前版本基础上进行修正（理想功能暂未实现）
+
+
+
+2019-1-28
+创建主页index.html
+
+考虑暂时放弃registered.html页面
+
+
+
+
+2019-1-30
+页面左侧顶部welcome替换为域名
+顶部右侧版本号在下版本移除
+顶部右侧链接将更换为其他内容
+
+login0.0.4.html
+在下版本增加注册按钮（不可点击状态）
+
+registred0.0.4.html
+
+index0.0.4.html
+添加新内容
+
+

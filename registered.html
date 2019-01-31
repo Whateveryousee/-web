@@ -4,57 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>一个bootstrap的用户注册界面</title>
-    <link rel="icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">  
-    <link rel="shortcut icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon"> 
+    <title>注册-registered</title>
+    <!-- <link rel="icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">  
+    <link rel="shortcut icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">  -->
     <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js">
+    <script src="lib/jquery-min-3.3.1.js"></script>
+    <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-inverse" role="navigation">
+    <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="" class="navbar-brand">Welcome</a>
-                
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="javascript:void(0);" class="navbar-brand">Welcome</a>
             </div>
-            <ul class="nav navbar-nav navbar-right">  
-                <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li> 
-                <li><a href="#"><span class="glyphicon glyphicon-blackboard"></span> 0.0.1</a></li>
-            </ul> 
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">  
+                    <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li> 
+                    <li class="active"><a href="javascript:void(0);"><span class="glyphicon glyphicon-file"></span> 注册</a></li> 
+                    <li><a href="javascript:void(0);"><span class="glyphicon glyphicon-blackboard"></span> 0.0.4</a></li>
+                </ul> 
+            </div>
         </div>
     </nav>
     <div class="container">
-        <form action="registered.php" method="POST">
+        <form action="registered.php" method="POST" class="form-horizontal" role="form">
             <div class="form-group">
-                <div class="row">
-                    <label for="InputUsername" class="col-sm-2 control-label text-center">注册用户名</label>
-                    <div class="col-sm-10 col-md-8 col-lg-5">
-                        <input type="test" maxlength="18" placeholder="赵钱孙李&xyz&123456@example" class="form-control" name="username">
-                    </div>
+                <label for="InputUsername" class="col-sm-2 control-label text-center">注册用户名</label>
+                <div class="col-sm-10 col-md-8 col-lg-6">
+                    <input type="test" maxlength="18" placeholder="赵钱孙李&xyz&123456@example" class="form-control" name="username">
                 </div>
             </div>
             <div class="form-group">
-                <div class="row">
-                    <label for="InputAccount" class="col-sm-2 control-label text-center">账号</label>
-                    <div class="col-sm-10 col-md-8 col-lg-5">
-                        <input type="text" maxlength="12" minlength="6" placeholder="xxx-123-!@#" class="form-control" name="Account">
-                    </div>
+                <label for="InputAccount" class="col-sm-2 control-label text-center">账号</label>
+                <div class="col-sm-10 col-md-8 col-lg-6">
+                    <input type="text" maxlength="12" minlength="6" placeholder="123456789" class="form-control" name="useraccount">
                 </div>
             </div> 
             <div class="form-group">
-                <div class="row">
-                    <label for="InputPassword" class="col-sm-2 control-label text-center">密码</label>
-                    <div class="col-sm-10 col-md-8 col-lg-5">
-                        <input type="password" maxlength="16" placeholder="Password" class="form-control">
-                    </div>
+                <label for="InputPassword" class="col-sm-2 control-label text-center">密码</label>
+                <div class="col-sm-10 col-md-8 col-lg-6">
+                    <input type="password" maxlength="16" placeholder="Password" class="form-control" name="userpassword">
                 </div>
             </div>
             <div class="form-group">
-                <div class="row">
-                    <label for="InputValidation" class="col-sm-2 control-label text-center">验证码</label>
-                    <div class="col-sm-10 col-md-8 col-lg-5">
-                        <input type="text" maxlength="4" placeholder="验证码需要通过管理员获取" class="form-control">
-                    </div>
+                <label for="InputValidation" class="col-sm-2 control-label text-center">验证码</label>
+                <div class="col-sm-10 col-md-8 col-lg-6">
+                    <input type="text" maxlength="4" placeholder="验证码需要通过管理员获取" class="form-control">
                 </div>
             </div>
             <div class="checkbox">
@@ -62,8 +63,22 @@
                     <input type="checkbox">我同意...</input>
                 </label>
             </div>
-            <button type="submit" class="btn btn-default col-xs-12 col-sm-6">注册</button>
+            <button type="submit" class="btn btn-info col-xs-12 col-sm-12 col-md-6 col-lg-4">注册</button>
         </form>
     </div>
+    <script>
+        window.onload = function(){
+            var oInput = btn ="";
+            oInput = document.querySelectorAll("input");
+            btn = document.querySelector("button")[0];
+            console.log(oInput);
+            for(var i in oInput.length){
+                this.value = oInput[i].value;
+            }
+            if(oInput.value){
+                btn.style.display = none;
+            }
+        }
+    </script>
 </body>
 </html>
